@@ -1,0 +1,1 @@
+This is a simple motion tracker application written in python. It uses OpenCV <http://opencv.willowgarage.com/wiki/> . If you are running on a Mac, you might want to reference this guide: http://sunny.in.th/2010/04/27/installing-opencv-21-on-snow-leopard.html.
