@@ -15,7 +15,7 @@ class Target:
         frame_size = cv.GetSize(frame)
         grey_image = cv.CreateImage(cv.GetSize(frame), cv.IPL_DEPTH_8U, 1)
         moving_average = cv.CreateImage(cv.GetSize(frame), cv.IPL_DEPTH_32F, 3)
-        color_image = None
+        difference = None
         
         while True:
             # Capture frame from webcam
@@ -24,7 +24,7 @@ class Target:
             # Smooth to get rid of false positives
             cv.Smooth(color_image, color_image, cv.CV_GAUSSIAN, 3, 0)
             
-            if not color_image:
+            if not difference:
                 # Initialize
                 difference = cv.CloneImage(color_image)
                 temp = cv.CloneImage(color_image)
